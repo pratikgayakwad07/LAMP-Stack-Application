@@ -184,16 +184,6 @@ localhost
 
 ---
 
-## ❌ Port already in use
-
-Change ports in `docker-compose.yml`:
-
-```
-8080 → 8082
-```
-
----
-
 # 📦 Stop Containers
 
 ```
@@ -201,10 +191,4 @@ docker-compose down
 ```
 
 ---
-
----
-
-# ⭐ If you like this project
-
-Give it a ⭐ on GitHub!
 
