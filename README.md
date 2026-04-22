@@ -16,11 +16,11 @@ This project demonstrates how to containerize and run a **multi-stack applicatio
 ```
 docker-multi-stack/
 │
-├── lamp/
+├── lamp-stack/
 │   ├── Dockerfile
 │   └── index.php
 │
-├── springboot/
+├── springboot-app/
 │   └── java-spring-boot-app/
 │       ├── Dockerfile
 │       └── (Spring Boot source code)
@@ -45,8 +45,17 @@ Make sure you have installed:
 ## 1️⃣ Clone Repository
 
 ```
-git clone https://github.com/pratikgayakwad07/java-spring-boot-app.git
+mkdir LAMP-stack-application
 cd LAMP-stack-application
+mkdir lamp-stack
+vim Dockerfile
+vim index.php
+
+mkdir springboot-app
+cd springboot-app
+git clone https://github.com/pratikgayakwad07/java-spring-boot-app.git
+cd java-spring-boot-app
+vim dockerfile
 ```
 
 ---
