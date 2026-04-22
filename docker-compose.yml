@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+
+  # MySQL DB
+  mysql:
+    image: mysql:5.7
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # LAMP (Apache + PHP)
+  lamp:
+    build: ./Lamp-stack
+    container_name: lamp_app
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
+
+  # Spring Boot App
+  springboot:
+    build: ./springboot-app/java-spring-boot-app
+    container_name: springboot_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
