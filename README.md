@@ -89,7 +89,7 @@ docker ps
 ### ✅ LAMP Stack
 
 ```
-http://localhost:8081
+http://public-ip:8081
 ```
 
 Expected Output:
@@ -103,7 +103,7 @@ Hello from LAMP Stack 🚀
 ### ✅ Spring Boot App
 
 ```
-http://localhost:8080
+http://publicip:8080
 ```
 
 ---
@@ -183,12 +183,6 @@ docker logs springboot_app
 
 ```
 mysql
-```
-
-❌ Don't use:
-
-```
-localhost
 ```
 
 ---
